@@ -15,30 +15,26 @@ Moins de 60 : E
 var note;
 
 	//Lecture au clavier (l'usager entre une valeur
-note = Number(prompt("Indiquez votre note en % pour connaitre son équivalent en note littérale"));
+	note = Number(prompt("Indiquez votre note en % pour connaitre son équivalent en note littérale"));
 	
 	//Les calculs
 
 	//Les affichages
-if(note >= 90 && note <= 100){
-	alert("Vous avez un A");
-}
-	else if(note >= 80 && note < 90){
-		alert("Vous avez un B");
-	}	
-	
-	else if(note >=70 && note < 80){
+		if(note >= 90 && note <= 100){
+			alert("Vous avez un A");
+		}
+		else if(note >= 80 && note < 90){
+			alert("Vous avez un B");
+		}	
+		else if(note >=70 && note < 80){
 		alert("Vous avez un C");
-	}
-	
-	else if(note >= 60 && note < 70){
-		alert("Vous avez un D");
-
-	}	
-	else if(note >= 0 && note < 60){
-		alert("Vous avez un E");
-	}
-	
-else{
-	alert("Erreur sur votre note, veillez recommencer");
-}
+		}
+		else if(note >= 60 && note < 70){
+				alert("Vous avez un D");
+		}	
+		else if(note >= 0 && note < 60){
+				alert("Vous avez un E");
+		}
+		else{
+			alert("Erreur sur votre note, veillez recommencer");
+		}

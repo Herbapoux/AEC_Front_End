@@ -12,25 +12,20 @@ var salaire;
 var tempsDouble;
 
 	//Lecture au clavier
-
-tauxHoraires = Number(prompt("Veillez entrer votre taux horaire"));
-nbHeures = Number(prompt("Veuillez entrer le nombre d'heures travaillées"));
+	tauxHoraires = Number(prompt("Veillez entrer votre taux horaire"));
+	nbHeures = Number(prompt("Veuillez entrer le nombre d'heures travaillées"));
 	
 	//Les calculs
-
-tempsDouble = (nbHeures - 40) * (2 * tauxHoraires);
-salaire = (tauxHoraires * nbHeures);
+	salaire = (tauxHoraires * nbHeures);
+	tempsDouble = (nbHeures - 40) * (2 * tauxHoraires) + (tauxHoraires * 40);
 
 	//Les affichages
-
-if(nbHeures <= 40){
-	alert("Votre salaire est de " + salaire + "$");
-}
-	else if(nbHeures > 40){
-		salaire = (tauxHoraires * 40) + tempsDouble;
-		alert("Votre salaire est de " + salaire + "$"); 
-	}
-
-else{
-	alert("Erreur sur la transcription de vos données")
-}
+		if(nbHeures <= 40){
+			alert("Votre salaire est de " + salaire + "$");
+		}
+		else if(nbHeures > 40){
+				alert("Votre salaire est de " + tempsDouble + "$"); 
+			}
+		else{
+			alert("Erreur sur la transcription de vos données")
+		}

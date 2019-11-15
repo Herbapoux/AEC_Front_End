@@ -8,20 +8,20 @@
 var nb;
 
 	//Lecture au clavier (l'usager entre une valeur
-nb = Number(prompt("Inscrire un nombre"));
+	nb = Number(prompt("Inscrire un nombre"));
 	
 	//Les calculs
 
 	//Les affichages
-if(nb > 0){
-	alert("Vous avez un nombre positif");
-}
-	else if(nb < 0){
-		alert("Vous avez un nombre négatif");
-	}
-	else if(nb === 0){
-		alert("Vous avec inscrit 0");
-	}		  
-else{
-	alert("Erreur sur le nombre transcrit");
-}
+		if(nb > 0){
+			alert("Vous avez un nombre positif");
+		}
+		else if(nb < 0){
+			alert("Vous avez un nombre négatif");
+			}
+		else if(nb === 0){
+			alert("Vous avec inscrit 0");
+			}		  
+		else{
+			alert("Erreur sur le nombre transcrit");	
+		}

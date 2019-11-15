@@ -8,22 +8,21 @@
 var temperature;
 
 	//Lecture au clavier (l'usager entre une valeur
-temperature = Number(prompt("Indiquez la température"));
+	temperature = Number(prompt("Indiquez la température"));
 	
 	//Les calculs
 
 	//Les affichages
-if(temperature >= -40 && temperature <= -10){
-	alert("HAAAAAA! Il fait froid")
-}
-	else if(temperature < -40){
-		alert("Il fait trop froid, il faut déménager!");
-	}
-	
-	else if(temperature >= 40){
-		alert("Il fait trop chaud, allez dormir dans votre frigo!")
-	}
+		if(temperature >= -40 && temperature <= -10){
+			alert("HAAAAAA! Il fait froid")
+		}
+		else if(temperature < -40){
+			alert("Il fait trop froid, il faut déménager!");
+			}
+		else if(temperature >= 40){
+			alert("Il fait trop chaud, allez dormir dans votre frigo!")
+			}
 
-else{
-	alert("Enfin une belle journée!")
-}
+		else{
+			alert("Enfin une belle journée!")
+		}
