@@ -17,13 +17,13 @@ var tempsDouble;
 	
 	//Les calculs
 	salaire = (tauxHoraires * nbHeures);
-	tempsDouble = (nbHeures - 40) * (2 * tauxHoraires) + (tauxHoraires * 40);
 
 	//Les affichages
 		if(nbHeures <= 40){
 			alert("Votre salaire est de " + salaire + "$");
 		}
 		else if(nbHeures > 40){
+			tempsDouble = (nbHeures - 40) * (2 * tauxHoraires) + (tauxHoraires * 40);
 				alert("Votre salaire est de " + tempsDouble + "$"); 
 			}
 		else{

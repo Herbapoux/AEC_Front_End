@@ -20,7 +20,6 @@ var motDePasse;
 		if(nomUtilisateur === "admin" && motDePasse === 12345){
 			alert("Bonjour " + nomUtilisateur);
 		}
-		
 		else{
 			alert("Votre nom d’utilisateur ou votre mot de passe est invalide")
 		}
