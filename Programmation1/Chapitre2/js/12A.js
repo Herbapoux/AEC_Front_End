@@ -37,11 +37,11 @@ sexe = prompt("Êtes-vous un garçon ou une fille?");
 if(sexe.toUpperCase() === "M" || sexe.toUpperCase() === "G" || sexe.toUpperCase() === "H" || sexe.toUpperCase() === "GARÇON" || sexe.toUpperCase() === "GARCON" || sexe.toUpperCase() === "HOMME" || sexe.toUpperCase() === "GARS"){
 	if(age >= 16 && age <= 25){
 		prixAssurance = prixVehicule * 5 / 100;
-		document.write("Le prix des assurances est de: " + prixAssurance + "$")
+		document.write('h1 class="vert">Le prix des assurances est de: ' + prixAssurance + "$" );
 	}
 	else if(age > 25){
 		prixAssurance = prixVehicule * 3 / 100;
-		document.write('h1 class="vert">Le prix des assurances est de: ' + prixAssurance + "$" )
+		document.write('h1 class="vert">Le prix des assurances est de: ' + prixAssurance + "$" );
 	}
 	else{
 		alert("Erreur");
@@ -50,11 +50,11 @@ if(sexe.toUpperCase() === "M" || sexe.toUpperCase() === "G" || sexe.toUpperCase(
 else if(sexe.toUpperCase() === "F" || sexe.toUpperCase() === "FILLE" || sexe.toUpperCase() === "FEMME"){
 	if(age >= 16 && age <= 25){
 		prixAssurance = prixVehicule * 3 / 100;
-		document.write("Le prix des assurances est de: " + prixAssurance + "$")
+		document.write("Le prix des assurances est de: " + prixAssurance + "$");
 	}
 	else if(age > 25){
 		prixAssurance = prixVehicule * 2 / 100;
-		document.write("Le prix des assurances est de: " + prixAssurance + "$")
+		document.write("Le prix des assurances est de: " + prixAssurance + "$");
 	}
 	else{
 		alert("Erreur");
