@@ -41,7 +41,7 @@ if(sexe.toUpperCase() === "M" || sexe.toUpperCase() === "G" || sexe.toUpperCase(
 	}
 	else if(age > 25){
 		prixAssurance = prixVehicule * 3 / 100;
-		document.write("Le prix des assurances est de: " + prixAssurance + "$" )
+		document.write('h1 class="vert">Le prix des assurances est de: ' + prixAssurance + "$" )
 	}
 	else{
 		alert("Erreur");
