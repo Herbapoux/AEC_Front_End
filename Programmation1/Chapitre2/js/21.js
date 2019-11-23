@@ -8,7 +8,6 @@ revenu > 0 et $7000.00 inclus : 16% du revenu imposable
 >14000 et $23000.00 inclus : $2485 + 21.5% du reste
 >23000 et $50000.00 inclus : $4420 + 24.5% du reste
 >50000 et + $11035 + 26% du reste.
-
 */
 
 
@@ -49,5 +48,5 @@ else if(revenu > 50000){
 }
 
 else{
-	alert("Il y a une erreur dans l'entrée de l'âge de l'individu");
+	alert("Il y a une erreur dans l'entrée de votre revenu");
 }
