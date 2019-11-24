@@ -13,21 +13,59 @@ Affichez une ligne de texte de la couleur de fond et de texte choisis par l'util
 var couleurTexte;
 var couleurFond;
 
-console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
-
-console.log("This is %cMy stylish message", "color: red; font-style: bold; background-color: blue;padding: 2px");
-
-console.log("This is %cMy stylish message", "font: arial; color: green; font-style: black; background-color: blue;padding: 2px");
-
-console.log("%cUser %s has %d points", "color:orange; background:blue; font-size: 16pt", 'User', 100);
-
-
 
 	//Lecture au clavier
-couleurTexte = prompt("Quelle couleur de texte voulez-vous? \n1. Vert? \n2. Bleu? \n3. Jaune?");
-couleurFond = prompt("Quelle couleur de fond voulez-vous? \n1. Rouge? \n2. Noir? \n3. Violet?");
+couleurTexte = prompt("Quelle couleur de texte voulez-vous? \n1. Vert? \n2. Magenta? \n3. Jaune?");
+couleurFond = prompt("Quelle couleur de fond voulez-vous? \nA. Rouge? \nB. Noir? \nC. Violet?");
 	//Les calculs
 
 	//Les affichages  
 
-if(couleurTexte.toUpperCase === "VERT" || )
+if(couleurTexte.toUpperCase() === "VERT" || couleurTexte.toUpperCase() === "V" || couleurTexte.toUpperCase() === "1"){
+	if(couleurFond.toUpperCase() === "ROUGE" || couleurFond.toUpperCase() === "R" || couleurFond.toUpperCase() === "A"){
+		document.write('<h1 class="vert rouge">Ceci est votre choix de couleurs</h1>');
+	}
+	else if(couleurFond.toUpperCase() === "NOIR" || couleurFond.toUpperCase() === "N" || couleurFond.toUpperCase() === "B"){
+		document.write('<h1 class="vert noir">Ceci est votre choix de couleurs</h1>');
+	}
+	else if(couleurFond.toUpperCase() === "VIOLET" || couleurFond.toUpperCase() === "V" || couleurFond.toUpperCase() === "C"){
+		document.write('<h1 class="vert violet">Ceci est votre choix de couleurs</h1>');
+	}
+	else{
+		document.write("Erreur");
+	}
+}
+
+else if(couleurTexte.toUpperCase() === "MAGENTA" || couleurTexte.toUpperCase() === "M" || couleurTexte.toUpperCase() === "2"){
+	if(couleurFond.toUpperCase() === "ROUGE" || couleurFond.toUpperCase() === "R" || couleurFond.toUpperCase() === "A"){
+		document.write('<h1 class="magenta rouge">Ceci est votre choix de couleurs</h1>');
+	}
+	else if(couleurFond.toUpperCase() === "NOIR" || couleurFond.toUpperCase() === "N" || couleurFond.toUpperCase() === "B"){
+		document.write('<h1 class="magenta noir">Ceci est votre choix de couleurs</h1>');
+	}
+	else if(couleurFond.toUpperCase() === "VIOLET" || couleurFond.toUpperCase() === "V" || couleurFond.toUpperCase() === "C"){
+		document.write('<h1 class="magenta violet">Ceci est votre choix de couleurs</h1>');
+	}
+	else{
+		document.write("Erreur");
+	}
+}
+
+else if(couleurTexte.toUpperCase() === "JAUNE" || couleurTexte.toUpperCase() === "J" || couleurTexte.toUpperCase() === "3"){
+	if(couleurFond.toUpperCase() === "ROUGE" || couleurFond.toUpperCase() === "R" || couleurFond.toUpperCase() === "A"){
+		document.write('<h1 class="jaune rouge">Ceci est votre choix de couleurs</h1>');
+	}
+	else if(couleurFond.toUpperCase() === "NOIR" || couleurFond.toUpperCase() === "N" || couleurFond.toUpperCase() === "B"){
+		document.write('<h1 class="jaune noir">Ceci est votre choix de couleurs</h1>');
+	}
+	else if(couleurFond.toUpperCase() === "VIOLET" || couleurFond.toUpperCase() === "V" || couleurFond.toUpperCase() === "C"){
+		document.write('<h1 class="jaune violet">Ceci est votre choix de couleurs</h1>');
+	}
+	else{
+		document.write("Erreur");
+	}
+}
+
+else{
+	document.write("Il y a une erreur sur l'entrée de vos données");
+}
