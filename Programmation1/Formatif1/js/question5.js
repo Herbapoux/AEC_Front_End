@@ -1,3 +1,7 @@
+/**
+ * Created by Yannick on 2019-29-04.
+ */
+
 /*
 Écrire le code qui permet de lire au clavier la valeur d’un angle d’une main de robot et d’afficher sa position.    Pour faire ce choix, utilisez la table  suivante :
 
