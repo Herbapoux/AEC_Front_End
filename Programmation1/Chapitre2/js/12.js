@@ -14,6 +14,7 @@ Pour une fille entre 16 et 25 ans, le taux est de 3 % et de 2% pour une fille pl
 */
 
     //Déclaration des variables
+/*
 var prixVehicule;
 var age;
 var sexe;
@@ -55,5 +56,49 @@ else if(sexe === "fille"){
 }
 else{
 	alert("erreur");
+}*/
+
+//Exercice corrigé 
+
+var prixVehicule;
+var age;
+var sexe;
+var prixAssurance;
+var taux;
+
+	//Lecture au clavier
+prixVehicule = Number(prompt("Veuillez entrer le prix du véhicule"));
+age = Number(prompt("Veillez entrer votre âge"));
+sexe = prompt("Êtes-vous un garçon ou une fille?");
+
+if(sexe === "garçon"){
+	if(age >= 16 && age <= 25){
+		taux = 0.5;
+	}
+	else if(age > 25){
+		taux = 0.3;	
+	}
+	else{
+		document.write("Vous ne pouvez pas conduire!!!");
+	}
 }
+else if(sexe === "fille"){
+	if(age >= 16 && age <= 25){
+		taux = 0.3;
+	}
+	else if(age > 25){
+		taux = 0.2;	
+	}
+	else{
+		document.write("Vous ne pouvez pas conduire!!!");
+	}
+}
+else{
+	alert("erreur");
+}
+
+prixAssurance = prixVehicule * taux;
+
+document.write("Le prix des assurances est de: " + prixAssurance + "$");
+
 
