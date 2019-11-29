@@ -52,10 +52,9 @@ else if(choixRaspberry === "2" || choixRaspberry.toUpperCase() === "RASPBERRY PI
 	choixRaspberry = "Raspberry Pi Zero";
 	prix += 15;
 }
-
 else{
 	choixRaspberry = "erreur";
- }
+}
 
 // Caméra
 
@@ -68,7 +67,7 @@ else if(cameraUSB.toUpperCase() === "NON"){
 }
 else{
 	choixRaspberry = "erreur";
- }
+}
 
 // Matrice
 
