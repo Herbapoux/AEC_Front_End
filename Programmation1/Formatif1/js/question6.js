@@ -38,7 +38,7 @@ var prix = 35;
 var livraison;
 
 choixRaspberry = prompt("Veuillez choisir entre les deux contrôleurs: \n1. RaspBerry Pi: 55$ \n2. RaspBerry Pi Zero: 15$");
-nbMoteur = Number(prompt("Veuillez indiquer le nombre de moteurs nécessaire entre 2 et 24 au coût de 5& chaque."));
+nbMoteur = Number(prompt("Veuillez indiquer le nombre de moteurs nécessaire entre 2 et 24 au coût de 5$ chaque."));
 cameraUSB = prompt("Est-ce que oui ou non vous avez besoin d'une caméra USB au coût de 35$?");
 matrice = prompt("Est-ce que oui ou non vous avez besoin d'une matrice LEDS pour les yeux au coût de 10$?");
 
@@ -83,91 +83,22 @@ else{
 	matrice = "erreur";
 }
 
+// moteur
+
 if(nbMoteur >= 2 && nbMoteur <= 24){
 	prix += 5 * nbMoteur;
 }
-
 else{
 	alert("Erreur");
 }
+
+// Livraison
 
 livraison = prix + prix * 0.15;
 
+//Résumé de l'achat
+
 alert("Votre résumé de l'achat: " + choixRaspberry + ", " + nbMoteur + " moteurs, " + cameraUSB + ", "  + matrice + ", " + "filament 3d" + " et " + "batterie USB" + "\nLe prix déboursé: " + prix + "$" + "\nLe prix avec la livraison: " + livraison + "$");
-
-
-/*if(choixRaspberry === "1"){
-	choixRaspberry = "Raspberry Pi";
-	prix += 55;
-
-	if(cameraUSB.toUpperCase() === "OUI"){
-		cameraUSB = "Caméra USB";
-		prix += 35;
-		
-		if(matrice.toUpperCase() === "OUI"){
-			matrice = "Matrice de LEDS";
-			prix += 10;
-		}
-		else if(matrice.toUpperCase() === "NON"){
-			matrice = "pas de matrice de LEDS"
-		}
-	}
-	else if(cameraUSB.toUpperCase() === "NON"){
-		cameraUSB = "pas de caméra";
-		
-		if(matrice.toUpperCase() === "OUI"){
-			matrice = "Matrice de LEDS";
-			prix += 10;
-		}
-		else if(matrice.toUpperCase() === "NON"){
-			matrice = "pas de matrice de LEDS"
-		}
-	}
-}
-	
-else if(choixRaspberry === "2" || choixRaspberry.toUpperCase() === "RASPBERRY PI ZERO"){
-	choixRaspberry = "Raspberry Pi Zero";
-	prix += 15;
-	
-	if(cameraUSB.toUpperCase() === "OUI"){
-		cameraUSB = "Caméra USB";
-		prix += 35;
-		
-		if(matrice.toUpperCase() === "OUI"){
-			matrice = "Matrice de LEDS";
-			prix += 10;
-		}
-		else if(matrice.toUpperCase() === "NON"){
-			matrice = "pas de matrice de LEDS"
-		}
-	}
-	else if(cameraUSB.toUpperCase() === "NON"){
-		cameraUSB = "pas de caméra";
-		
-		if(matrice.toUpperCase() === "OUI"){
-			matrice = "Matrice de LEDS";
-			prix += 10;
-		}
-		else if(matrice.toUpperCase() === "NON"){
-			matrice = "pas de matrice de LEDS"
-		}
-	}
-}
-
-
-if(nbMoteur >= 2 && nbMoteur <= 24){
-	prix += 5 * nbMoteur;
-}
-
-else{
-	alert("Erreur");
-}
-
-alert("Votre résumé de l'achat: " + choixRaspberry + ", " + nbMoteur + " moteurs, " + cameraUSB + ", "  + matrice + "\nLe prix déboursé: " + prix + "$" );
-*/
-
-
-
 
 
 
