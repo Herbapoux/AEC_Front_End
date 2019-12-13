@@ -11,6 +11,7 @@ var nb0=0
 var nb1=0
 
 for (var i=1; i<=100; i++){
+	//var nb = Math.round(Math.random());
 	var nb = Math.floor(Math.random() +0.5);
 
 	if(nb === 0){
