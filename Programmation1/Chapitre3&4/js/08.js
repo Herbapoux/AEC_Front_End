@@ -8,6 +8,7 @@ Transférer les valeurs Fahrenheit de -40 à 40 en Celsius par tranche de 5. (Ce
 */
 
 var celcius;
+
 for(var f=-40; f<=40; f+=5){
 	celcius = (5/9)*(f-32);
 	document.write(f + " Fahrenheits = " + celcius.toFixed(2) + " celcius<br>");
