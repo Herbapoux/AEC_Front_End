@@ -11,8 +11,19 @@ var carre;
 var cube;
 
 for(var i=1; i<=10; i++){
-	carre = i*i;
-	cube = i*i*i;
+	carre = Math.pow(i,2);
+	cube = Math.pow(i,3);
 	document.write("Pour le nombre " + i + ", le carré est = " + carre + ", et son cube est = " + cube + "<br>");
 }
+
+/**
+Prof
+
+var carre, cube;
+for(var i=1;i<=10;i++){
+   carre = Math.pow(i,2);
+   cube = Math.pow(i,3);
+   document.write(i + " au carré =  " + carre + " au cube = " + cube + "<br>");
+}
+*/
 
