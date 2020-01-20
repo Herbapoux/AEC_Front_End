@@ -12,20 +12,18 @@ Par exemple : tab[2] = 10; signifie qu'il y a 10 familles qui ont 2 enfants.
 */
 
 var nbEnfants = [0|0|0|0|0|0|0|0|0|0];
+var nb = Number(prompt("Combien d'enfant avez-vous? Écrire STOP pour afficher les stats."))
 var stats = false;
 
-
-for(var i=0; i<9999; i++){
-	nbEnfants[i] = Number(prompt("Combien d'enfant avez-vous? Écrire STOP pour afficher les stats."));
-	
-	if(nbEnfants === "STOP"){			
+while(nbEnfants != "STOP"){
+	nbEnfants[nb] = Number(prompt("Combien d'enfant avez-vous? Écrire STOP pour afficher les stats."));
+}
+if(nbEnfants === "STOP"){			
 		stats = true;
-	}
-}	
-
+}
 
 if(stats){
-	document.write(i + "<br>");
+	document.write(nbEnfants[nb] + "<br>");
 }
 
 else{
