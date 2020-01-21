@@ -11,27 +11,18 @@ Truc : il faut utiliser l'indice du tableau pour représenter le nombre d'enfant
 Par exemple : tab[2] = 10; signifie qu'il y a 10 familles qui ont 2 enfants.
 */
 
-var nbEnfants = [0|0|0|0|0|0|0|0|0|0];
-var nb = Number(prompt("Combien d'enfant avez-vous? Écrire STOP pour afficher les stats."))
+var nbEnfantsParFamille = [0,0,0,0,0,0,0,0,0,0];
 var stats = false;
+var nb = Number(prompt("Combien d'enfant avez-vous? Écrire STOP pour afficher les stats."));
 
-while(nbEnfants != "STOP"){
-	nbEnfants[nb] = Number(prompt("Combien d'enfant avez-vous? Écrire STOP pour afficher les stats."));
-}
-if(nbEnfants === "STOP"){			
+while(!isNaN(nb)){
+	nb = Number(prompt("Combien d'enfant avez-vous? Écrire STOP pour afficher les stats."));
+	nbEnfantsParFamille[nb-1]++
+	if(nb === !isNaN(nb)){			
 		stats = true;
+	}
 }
 
 if(stats){
-	document.write(nbEnfants[nb] + "<br>");
+	document.write(nbEnfantsParFamille[nb] + "<br>");
 }
-
-else{
-	alert("erreur");
-}
-
-
-
-
-
-
