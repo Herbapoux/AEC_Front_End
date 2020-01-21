@@ -14,15 +14,17 @@ Par exemple : tab[2] = 10; signifie qu'il y a 10 familles qui ont 2 enfants.
 var nbEnfantsParFamille = [0,0,0,0,0,0,0,0,0,0];
 var stats = false;
 var nb = Number(prompt("Combien d'enfant avez-vous? Écrire STOP pour afficher les stats."));
+	nbEnfantsParFamille[nb]++
+
 
 while(!isNaN(nb)){
 	nb = Number(prompt("Combien d'enfant avez-vous? Écrire STOP pour afficher les stats."));
-	nbEnfantsParFamille[nb-1]++
-	if(nb === !isNaN(nb)){			
+	nbEnfantsParFamille[nb]++
+	if(isNaN(nb)){			
 		stats = true;
 	}
 }
 
 if(stats){
-	document.write(nbEnfantsParFamille[nb] + "<br>");
+	document.write(nbEnfantsParFamille + "<br>");
 }
