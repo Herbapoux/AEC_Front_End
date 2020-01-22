@@ -23,9 +23,6 @@ tableMois[9] = "Octobre";
 tableMois[10] = "Novembre";
 tableMois[11] = "Décembre";
 
-for(var i=0; i<tableMois.length; i++){
-	document.write(tableMois[i] + "<br>")
-}
 
 
 
