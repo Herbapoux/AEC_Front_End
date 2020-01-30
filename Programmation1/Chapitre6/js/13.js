@@ -10,7 +10,7 @@ Lire 12 nombres quelconques et les mettre dans un tableau. Vérifier si le derni
 var nbRandom = [];
 
 for(var i=0; i<12; i++){
-	nbRandom[i] = Math.floor(Math.random()*15+1);
+	nbRandom[i] = Math.floor(Math.random()*12+1);
 	document.write((i+1) + "= " + nbRandom[i] + "<br>");
 }
 
@@ -21,26 +21,3 @@ for(var j=0; j<12; j++){
 		document.write("<br>Voici le résulat:<br> " + nbRandom[11] + " + " + nbRandom[j] + " = 15<br>");
 	} 
 }
-//document.write(nbRandom);
-
-/*
-var tableau = [];
-var nbrMax = 0;
-var nbrMin = 999;
-
-for(var i=0; i<10; i++){
-	tableau[i] = Math.floor(Math.random()*100);
-	document.write(tableau[i] + "<br>");
-}
-
-for(var j=0; j<10; j++){
-	if(tableau[j] > nbrMax){
-		nbrMax = tableau[j];
-	}
-	if(tableau[j]<nbrMin){
-		nbrMin = tableau[j];
-	}
-}
-
-document.write("Le plus petit nombre est: " + nbrMin + "<br>Le plus grand nombre est: " + nbrMax);
-*/
