@@ -11,7 +11,7 @@ A. Essayez SANS la méthode sort()
 let tableau = [];
 let temp;
 
-//A. SANS sort(); 
+//A. SANS sort()
 for(var i=0; i<5; i++){
 	tableau[i] = Math.floor(Math.random() * 100);
 	document.write(tableau[i] + " ")

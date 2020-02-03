@@ -10,7 +10,7 @@ B. Avec la méthode sort()
 
 let tableau = [];
 
-//B. AVEC sort(). 
+//B. AVEC sort() 
 for(var i=0; i<5; i++){
 	tableau[i] = Math.floor(Math.random() * 100);
 }
