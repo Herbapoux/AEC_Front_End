@@ -1,9 +1,9 @@
 /**
- * Created by Yannick on 28-12-2019. Chapitre 6.
+ * Created by Yannick on 30-12-2019. Chapitre 6.
  */
 
 /* 
-Question 16:
+Question 16A:
 Créez un tableau de 10 valeurs :
 
 Bouclez pour i de 0 à length-1.
