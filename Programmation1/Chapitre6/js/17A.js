@@ -5,13 +5,13 @@
 /* 
 Question 17A:
 Lire 5 valeurs dans un tableau. Trier ce tableau en ordre décroissant.
-B. Essayez SANS la méthode sort()
+A. Essayez SANS la méthode sort()
 */
 
 let tableau = [];
 let temp;
 
-//B. sans sort(); 
+//A. SANS sort(); 
 for(var i=0; i<5; i++){
 	tableau[i] = Math.floor(Math.random() * 100);
 	document.write(tableau[i] + " ")
@@ -23,6 +23,6 @@ for(var i=0; i<5; i++){
 		}
 	}
 }
-document.write("<br>Nouveau tableau "+ tableau + "<br>");
+document.write("<br>Nouveau tableau"+ tableau + "<br>");
 
 
