@@ -67,5 +67,6 @@ let Pingouins = new Equipe("Pingouins de Pittsburg", SydneyCrosby, MarioLemieux,
 document.write(SydneyCrosby.Total() + " points<br>");
 document.write(Pingouins.AfficherPointsTotaux() + " points pour les " + Pingouins.nom + "<br>");
 document.write(Pingouins.AfficherAlignement());
+document.write(SydneyCrosby.Total());
 
 
