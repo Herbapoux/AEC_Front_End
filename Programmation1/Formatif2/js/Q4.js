@@ -46,10 +46,7 @@ class MonnaieVirtuelle{
 		this.nomMonnaie = nomMonnaie;
 		this.valeurEnUSD = valeurEnUSD;
 		this.actif = actif;
-	}
-	
-	TotalActif(){
-		return this.valeurEnUSD * this.actif;
+		this.actifEnUSD = this.valeurEnUSD * this.actif;
 	}
 }
 
@@ -62,7 +59,7 @@ class Portefeuille{
 	ValeurDuPortefeuille(){
 		let valeurTotal = 0;
 		for(let i=0; i<tableauMonnaies.length; i++){
-			valeurTotal += tableauMonnaies[i].TotalActif();
+			valeurTotal += tableauMonnaies[i].actifEnUSD;
 		}
 		return valeurTotal;
 	}
@@ -72,15 +69,11 @@ let Bitcoin = new MonnaieVirtuelle("Bicoin", 9730, 6);
 let Ethereum = new MonnaieVirtuelle("Ethereum", 194, 20);
 let Litecoin = new MonnaieVirtuelle("Litecoin", 58, 10);
 
-document.write(Bitcoin.TotalActif() + "<br>");
-document.write(Ethereum.TotalActif() + "<br>");
-document.write(Litecoin.TotalActif() + "<br>");
-
 let tableauMonnaies = [Bitcoin, Ethereum, Litecoin];
 let ShanyCarle = new Portefeuille("Shany Carle", tableauMonnaies);
 
 let grandTotal = ShanyCarle.ValeurDuPortefeuille();
 
-document.write(grandTotal);
+document.write("La valeur du portefeuille de " + ShanyCarle.nomProprietaire + " est égal à " + grandTotal + " $");
 
 			

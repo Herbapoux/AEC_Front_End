@@ -15,60 +15,47 @@ Affichez les élèves qui réussissent l’examen et ceux qui échouent.
 
 */
 
-/*class Note{
-	
-	constructor(aleatoire){
-		this.aleatoire = aleatoire;
-	}
-	
-	Resultat(){
-		return(Math.floor(Math.random)*20);
-	}
-}
-*/
-
-
 
 class Examen{
-	
-	constructor(q1,q2,q3,q4,q5){
-		this.q1 = q1;
-		this.q2 = q2;
-		this.q3 = q3;
-		this.q4 = q4;
-		this.q5 = q5;
+	constructor(noteQuestions){
+		this.noteQuestions = noteQuestions
 	}
 	
 	GetNote(){
-		return(????*100/20);
+		this.noteQuestion * 100 /20;
+	}
+	
+	GetNoteExamen(){
+		for(let j=0; j<noteQuestions.length; j++){
+			noteQuestions[j] = Math.floor(Math.random() *20 +.5);
+		}
 	}
 }
 
 class Etudiant{
-	
-	constructor(nom, prenom, Examen){
+	constructor(nom, prenom, examen){
 		this.nom = nom;
 		this.prenom = prenom;
-		this.Examen = Examen;
+		this.examen = examen;
 	}
-	
 }
 
-let examen = new Examen(question1, question2, question3, question4, question5);
-let question1 = Math.floor(Math.random() *20);
-let question2 = Math.floor(Math.random() *20);
-let question3 = Math.floor(Math.random() *20);
-let question4 = Math.floor(Math.random() *20);
-let question5 = Math.floor(Math.random() *20);
+let YannickPoulin = new Etudiant("Poulin", "Yannick", Examen);
+let MireilleLegault = new Etudiant("Legault", "Mireille", Examen);
+let PascalRousseau = new Etudiant("Rousseau", "Pascal", Examen);
+let StephaneTrudeau = new Etudiant("Trudeau", "Stephane", Examen);
+let RoxaneCharest = new Etudiant("Charest", "Roxane", Examen);
+let BenoitGagnon = new Etudiant("Ganon", "Benoit", Examen);
+let MartinDurette = new Etudiant("Durette", "Martin", Examen);
+let DidierPLantard = new Etudiant("Plantard", "Didier", Examen);
+let ArianeBeaulieu = new Etudiant("Beaulieu", "Ariane", Examen);
+let AndreDesormeaux = new Etudiant("Desormeaux", "André", Examen);
 
+document.write("La note de Yannick Poulin est de : " + YannickPoulin.GetNoteExamen())
 
-let etudiant1 = new Etudiant("Éric" + "Fontaine" + examen);
-let etudiant2 = new Etudiant("Patrice" + "Couture" + examen);
-let etudiant3 = new Etudiant("Roxane" + "Charest" + examen);
-let etudiant4 = new Etudiant("Henry" + "Letarte" + examen);
-let etudiant5 = new Etudiant("Sophie" + "Bergeron" + examen);
-let etudiant6 = new Etudiant("Benoit" + "Gagnon" + examen);
-let etudiant7 = new Etudiant("Mireille" + "Legault" + examen);
-let etudiant8 = new Etudiant("Marie" + "Lachance" + examen);
-let etudiant9 = new Etudiant("Christian" + "Perrin" + examen);
-let etudiant10 = new Etudiant("Martin" + "Durette" + examen);
+let etudiants = [YannickPoulin, MireilleLegault, PascalRousseau, StephaneTrudeau, RoxaneCharest, BenoitGagnon, MartinDurette, DidierPLantard, ArianeBeaulieu, AndreDesormeaux];
+
+let noteQuestions = [q1, q2, q3, q4, q5];
+
+let monExamen = new Examen (noteQuestions);
+

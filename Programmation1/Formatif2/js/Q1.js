@@ -26,12 +26,13 @@ let darkestLariat;
 for (let i=0; i<2; i++){
 	darkestLariat = Math.floor(Math.random() + .5)*100;
 	degats += darkestLariat;
-	document.write(darkestLariat + "<br>")
+	document.write("Attaque: " + darkestLariat + "<br>")
 }
 	
 	
 if(attAdverse.toUpperCase() === "EAU"){
 	degats = degats *2;
+	document.write("Le Pokemon adverse est vulnérable face à vos attaques!! Vos dégâts sont doublés!<br>")
 }
 
-document.write("Vous avez fait :" + degats + " dégâts.");
+document.write("Vous avez fait un total de: " + degats + " dégâts.");

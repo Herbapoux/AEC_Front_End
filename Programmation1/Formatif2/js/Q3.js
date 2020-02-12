@@ -27,11 +27,7 @@ for(let recherche=0; recherche<tabChance.length; recherche++){
 		trouver = true;
 	}
 }
-/*if(usager === tabChance[i]){
-		trouver = true;
-		document.write(" YÉ!!! ")
-}
-*/
+
 if(trouver){
 	document.write("<br>Vous l'avez trouvé: " + usager);
 }
