@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr-ca">
+	<head>
+	  <meta charset="utf-8">
+	  <link rel="icon" type="image/png" href="favicon.png"/>
+		<title>Comicon</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="css/bootstrap.css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+	</head>
+	<body>
+		<div class="container" >
+			<h2>Shawicon</h2>
+			<form>
+				<div class="form-group">
+					<input type="text" class="form-control" id="formNom" placeholder="Entrez le nom d'usager">		
+ 				</div>
+				<div class="form-group" >
+					<input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe">
+				</div>
+				<div class="form-group" >
+					<input type="password" class="form-control" id="confirm_password" placeholder="Confirmez le mot de passe">
+				</div>
+				<div class="form-group" >
+					<input type="email" class="form-control" id="email" placeholder="Entrez le courriel">
+				</div>
+				
+				<div class="container">
+					<label class="radio-inline ml-1">
+						<input type="radio" value="yoda" name="radiodForm" id="radioStarwars">Starwars
+					</label>
+					<label class="radio-inline ml-1">
+						<input type="radio" value="spiderman" name="radiodForm" id="radioMarvel">Marvel
+					</label>
+					<label class="radio-inline ml-1">
+						<input type="radio" value="batman" name="radiodForm" id="radioDc">DC
+					</label>			
+				</div>
+				
+				<button type="submit" class="pure-button pure-button-primary">Confirm</button>
+				
+			</form>
+			<div id="yodaId" class="yoda box container" style="display: none" >
+				<img id="yodaImage" src="img/yoda.png" alt="image de yoda" width="500px" />
+			</div>
+			<div id="spidermanId" class="spiderman box container" style="display: none" >
+				<img id="spidermanImage" src="img/spiderman.jpg" alt="image de spiderman"/>
+			</div>
+			<div id="batmanId" class="batman box container" style="display: none" >
+				<img id="batmanImage" src="img/batman.jpg" alt="image de batman"/>
+			</div>
+		</div>
+
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/monJs.js"></script>
+	</body>
+</html>
+
