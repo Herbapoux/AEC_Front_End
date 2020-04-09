@@ -2,14 +2,100 @@
 	outline: 2px solid white;
 }
 
-.background{
-	background-color: black;
+.backgroundConteneur{
+	background-image: url("../../ExamenFinal/img/background/noir.jpg");
 }
 
-/*
-    code by Iatek LLC 2018 - CC 2.0 License - Attribution required
-    code customized by Azmind.com
-*/
+@media screen {
+    #printSection {
+        display: none;
+    }
+}
+@media print {
+    body * {
+        visibility:hidden;
+    }
+    #printSection, #printSection * {
+        visibility:visible;
+    }
+    #printSection {
+        position:absolute;
+        left:0;
+        top:0;
+    }
+}
+
+#rectangleBleu{
+    width:40px;
+    height:40px;
+	background:#618AAA;
+    background-image: url("../../ExamenFinal/img/background/bleu.jpg");
+    cursor: pointer;
+    display:inline-block;
+    border: 1px solid black;
+}
+
+#rectangleBleuFonce{
+    width:40px;
+    height:40px;
+	background:#1b2736;
+	background-image: url("../../ExamenFinal/img/background/bleuFonce.jpg");
+    cursor: pointer;
+    display:inline-block;
+    border: 1px solid black;
+}
+
+#rectangleBlanc{
+    width:40px;
+    height:40px;
+	background:#ffffff;
+    background-image: url("../../ExamenFinal/img/background/blanc.jpg");
+    cursor: pointer;
+    display:inline-block;
+    border: 1px solid black;
+}
+
+#rectangleRouge{
+    width:40px;
+    height:40px;
+	background:#8D1E2;
+    background-image: url("../../ExamenFinal/img/background/rouge.jpg");
+    cursor: pointer;
+    display:inline-block;
+    border: 1px solid black;
+}
+
+#rectangleNoir{
+    width:40px;
+    height:40px;
+	background:black;
+    background-image: url("../../ExamenFinal/img/background/noir.jpg");
+    cursor: pointer;
+    display:inline-block;
+    border: 1px solid black;
+}
+
+#rectangleGris{
+    width:40px;
+    height:40px;
+	background:#62676A;
+    background-image: url("../../ExamenFinal/img/background/gris.jpg");
+    cursor: pointer;
+    display:inline-block;
+    border: 1px solid black;
+}
+
+#rectangleRose{
+    width:40px;
+    height:40px;
+	background:#9A7587;
+    background-image: url("../../ExamenFinal/img/background/rose.jpg");
+    cursor: pointer;
+    display:inline-block;
+    border: 1px solid black;
+}
+
+
 @media (min-width: 768px) and (max-width: 991px) {
     /* Show 4th slide on md if col-md-4*/
     .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {

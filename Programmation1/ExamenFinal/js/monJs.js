@@ -1,4 +1,3 @@
-
 let nomLettres;
 
 $("#userName").keydown(function(event){ 
@@ -42,7 +41,9 @@ $( "#boutonGo" ).click(function() {
 		let image = $("<img />",{
 			id:"lettreImage"+i,
 			src: "img/Letters/"+nomLettres[i]+"/"+nomLettres[i]+nbAleatoire+".jpg",
-			class:"img-fluid lettre"
+			class:"img-fluid lettre",
+			onclick: "fOuvreModal("+i+",'"+nomLettres[i]+"')"
+			
 		})
 		
 		let imageDiv = $("<div>",{
@@ -51,22 +52,54 @@ $( "#boutonGo" ).click(function() {
 		});
 		
 		image.appendTo(imageDiv);
-		imageDiv.appendTo("#conteneurImages");
+		imageDiv.appendTo("#conteneurLettres");
 	}
 	
 	$('#monFormulaire').trigger("reset");
+	
+	//Hover
+	
+	$('.img-fluid').hover(function () {
+		$('.img-fluid').css("cursor", "pointer");
+	});
 });
 
-// Instantiate the Bootstrap carousel
-$('.multi-item-carousel').carousel({
-  interval: false
+
+//ouvre modal
+
+function fOuvreModal(LettrePosition,Lettre){
+	for(let j=1; j<6; j++){
+		$("#image"+j).attr("src", "img/Letters/"+Lettre+"/"+Lettre+j+".jpg");
+		$("#image"+j).attr("alt", LettrePosition);
+	}
+	$("#modalLettres").modal("show");
+}
+
+$('#carousel-example img').click(function(){
+	let aInformation = this.alt;
+	
+	$("#lettreImage"+aInformation).attr("src", this.src);
+	
+	$("#modalLettres").modal("hide");
 });
 
+//Changer de couleur
+//let backgroundColor;
+//let backgroundImage;
 
-/*
-    Carousel
+$( ".rectangle" ).click(function() {
+	let imageFond = $( this ).css( "background-image" );
+	let rectangleId = $(this).attr("id");
+	$( ".backgroundConteneur" ).css("background-image", imageFond);
+	$("#"+rectangleId).animate({height:"toggle",opacity:"0.2"},"fast");
+	$("#"+rectangleId).animate({height:"toggle",opacity:"1"},"fast");
+});
+
+/*$("#rectangleBleu").click(function(){
+	$(".rowLetters").css("background-color","#310170"),
+		$(".rowLetters").css("background-image","url(files/imgPhotociti/Background/bleu.jpg)"),$("#rectangleBleu").animate({height:"toggle",opacity:"0.4"},"slow"),$("#rectangleBleu").animate({height:"toggle",opacity:"0.8"},"slow")}),
 */
-
+//Carousel
 $('#carousel-example').on('slide.bs.carousel', function (e) {
 
     let $e = $(e.relatedTarget);
@@ -87,29 +120,3 @@ $('#carousel-example').on('slide.bs.carousel', function (e) {
         }
     }
 });
-
-
-/*
-function OuvreModalInfo(TitreModal,LienFichierModal)
-{
-    $("#ModalInfo .modal-title").html(TitreModal);
-    $("#ModalInfo .modal-body").load(LienFichierModal);
-    $('#ModalInfo').modal('toggle')
-}
-
-function OuvreModalHoraire(TitreModal,LienFichierModal)
-{
-    $("#ModalHoraire .modal-title").html(TitreModal);
-    $("#ModalHoraire .modal-body").load(LienFichierModal);
-    $('#ModalHoraire').modal('toggle')
-}
-
-$("#natationShow").hover(function () {
-    $('.containerFiltre').css("cursor", "pointer");
-
-    $('#natationHide').show();
-    $('#natationShow').hide();
-});
-*/
-
-
