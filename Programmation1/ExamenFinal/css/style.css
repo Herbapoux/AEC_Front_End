@@ -1,98 +1,69 @@
+body{
+	position: relative;
+	height: 100%;
+}
+
 .lettre{
-	outline: 2px solid white;
+	border: 2px solid white;
 }
 
 .backgroundConteneur{
 	background-image: url("../../ExamenFinal/img/background/noir.jpg");
 }
 
-@media screen {
-    #printSection {
-        display: none;
-    }
-}
-@media print {
-    body * {
-        visibility:hidden;
-    }
-    #printSection, #printSection * {
-        visibility:visible;
-    }
-    #printSection {
-        position:absolute;
-        left:0;
-        top:0;
-    }
+.cercle{
+	border-radius: 50%;
+	width:60px;
+    height:60px;
+	display:inline-block;
+	cursor: pointer;
+	border: 1px solid black;
+
 }
 
-#rectangleBleu{
-    width:40px;
-    height:40px;
+.backgroundColor{
+	background-color: aliceblue;
+}
+
+@media print{
+	.hidden{
+		visibility: hidden;
+	}
+}
+
+#cercleBleu{
 	background:#618AAA;
     background-image: url("../../ExamenFinal/img/background/bleu.jpg");
-    cursor: pointer;
-    display:inline-block;
-    border: 1px solid black;
 }
 
-#rectangleBleuFonce{
-    width:40px;
-    height:40px;
+#cercleBleuFonce{
 	background:#1b2736;
 	background-image: url("../../ExamenFinal/img/background/bleuFonce.jpg");
-    cursor: pointer;
-    display:inline-block;
-    border: 1px solid black;
 }
 
-#rectangleBlanc{
-    width:40px;
-    height:40px;
+#cercleBlanc{
 	background:#ffffff;
     background-image: url("../../ExamenFinal/img/background/blanc.jpg");
-    cursor: pointer;
-    display:inline-block;
-    border: 1px solid black;
 }
 
-#rectangleRouge{
-    width:40px;
-    height:40px;
+#cercleRouge{
 	background:#8D1E2;
     background-image: url("../../ExamenFinal/img/background/rouge.jpg");
-    cursor: pointer;
-    display:inline-block;
-    border: 1px solid black;
 }
 
-#rectangleNoir{
-    width:40px;
-    height:40px;
+#cercleNoir{
 	background:black;
     background-image: url("../../ExamenFinal/img/background/noir.jpg");
-    cursor: pointer;
-    display:inline-block;
-    border: 1px solid black;
 }
 
-#rectangleGris{
-    width:40px;
-    height:40px;
+#cercleGris{
 	background:#62676A;
     background-image: url("../../ExamenFinal/img/background/gris.jpg");
-    cursor: pointer;
-    display:inline-block;
-    border: 1px solid black;
 }
 
-#rectangleRose{
-    width:40px;
-    height:40px;
+#cercleRose{
 	background:#9A7587;
     background-image: url("../../ExamenFinal/img/background/rose.jpg");
-    cursor: pointer;
-    display:inline-block;
-    border: 1px solid black;
 }
 
 

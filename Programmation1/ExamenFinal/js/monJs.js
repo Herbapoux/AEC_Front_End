@@ -1,5 +1,6 @@
 let nomLettres;
 
+//bouton GO & Press key enter
 $("#userName").keydown(function(event){ 
 	if(event.keyCode === 13){
 		event.preventDefault();
@@ -7,9 +8,11 @@ $("#userName").keydown(function(event){
 	}
 }); 
 
+//gestion des lettres avec prise aléatoire de la lettre entrée
 $( "#boutonGo" ).click(function() {
-	
+	$("#conteneurLettres").removeClass("d-none");
 	$(".removeClass").remove();
+	
 	
 	nomLettres = $("#userName").val().split('');
 	let nbCol = Math.floor(12/nomLettres.length);
@@ -17,14 +20,15 @@ $( "#boutonGo" ).click(function() {
 	if(nomLettres.length<3 || nomLettres.length>12){
 		alert("Vous devez entrer un nom entre 3 et 12 lettres");
 		$('#monFormulaire').trigger("reset");
+		$("#conteneurLettres").addClass("d-none");
 		{return;}
 	}
 
 	for(let i=0; i<nomLettres.length; i++){
-		
+		//lettre aléatoire
 		let nbAleatoire = Math.floor(Math.random() * 5+1);
 		nomLettres[i] = nomLettres[i].toUpperCase();
-
+		//gestion des caractères spéciaux
 		if(nomLettres[i] === "*"){
 			nomLettres[i] = "CS";
 		}
@@ -37,7 +41,7 @@ $( "#boutonGo" ).click(function() {
 		else if(nomLettres[i] === "Ù"){
 			nomLettres[i] = "U";
 		}
-
+		//code de gestion des lettres
 		let image = $("<img />",{
 			id:"lettreImage"+i,
 			src: "img/Letters/"+nomLettres[i]+"/"+nomLettres[i]+nbAleatoire+".jpg",
@@ -58,16 +62,15 @@ $( "#boutonGo" ).click(function() {
 	$('#monFormulaire').trigger("reset");
 	
 	//Hover
-	
 	$('.img-fluid').hover(function () {
 		$('.img-fluid').css("cursor", "pointer");
 	});
 });
 
 
-//ouvre modal
-
+//ouvre modal - changement de lettre
 function fOuvreModal(LettrePosition,Lettre){
+
 	for(let j=1; j<6; j++){
 		$("#image"+j).attr("src", "img/Letters/"+Lettre+"/"+Lettre+j+".jpg");
 		$("#image"+j).attr("alt", LettrePosition);
@@ -83,22 +86,12 @@ $('#carousel-example img').click(function(){
 	$("#modalLettres").modal("hide");
 });
 
-//Changer de couleur
-//let backgroundColor;
-//let backgroundImage;
-
-$( ".rectangle" ).click(function() {
-	let imageFond = $( this ).css( "background-image" );
-	let rectangleId = $(this).attr("id");
+//choix background image
+$( ".cercle" ).click(function() {
+	let imageFond = $(this).css( "background-image" );
 	$( ".backgroundConteneur" ).css("background-image", imageFond);
-	$("#"+rectangleId).animate({height:"toggle",opacity:"0.2"},"fast");
-	$("#"+rectangleId).animate({height:"toggle",opacity:"1"},"fast");
 });
 
-/*$("#rectangleBleu").click(function(){
-	$(".rowLetters").css("background-color","#310170"),
-		$(".rowLetters").css("background-image","url(files/imgPhotociti/Background/bleu.jpg)"),$("#rectangleBleu").animate({height:"toggle",opacity:"0.4"},"slow"),$("#rectangleBleu").animate({height:"toggle",opacity:"0.8"},"slow")}),
-*/
 //Carousel
 $('#carousel-example').on('slide.bs.carousel', function (e) {
 
@@ -120,3 +113,4 @@ $('#carousel-example').on('slide.bs.carousel', function (e) {
         }
     }
 });
+
