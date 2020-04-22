@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1e163daffa323dc55bcf828c438be9b0",
+    "revision": "fb12f97fe167f10e5bc4592c62558dcb",
     "url": "./index.html"
   },
   {
-    "revision": "79fffcbf62c369c9ab15",
+    "revision": "d9df36989b3f6c55ba6a",
     "url": "./static/css/main.d1b05096.chunk.css"
   },
   {
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/js/2.8f6e9f04.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "79fffcbf62c369c9ab15",
-    "url": "./static/js/main.80c0bf06.chunk.js"
+    "revision": "d9df36989b3f6c55ba6a",
+    "url": "./static/js/main.f7d59e5d.chunk.js"
   },
   {
     "revision": "f14872e1fc8ecf217aa0",
     "url": "./static/js/runtime-main.f66a7021.js"
   },
   {
-    "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
-    "url": "./static/media/logo.5d5d9eef.svg"
+    "revision": "73a72898a5265702b913ff227b8a0204",
+    "url": "./static/media/netflixLogo.73a72898.png"
   }
 ]);
