@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './img/netflixLogo.png';
 import './App.css';
+
+const netflixLogo = (
+  <img
+  src ={logo}
+  alt ="Netflix"
+  />
+)
+
+const texteAfficher = (
+  <div>
+    <h1>
+      THE LAST DANCE
+    </h1>
+    <p>
+      Une production de
+    </p>
+    {netflixLogo}
+  </div>
+
+);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  texteAfficher
   );
 }
 
