@@ -12,14 +12,7 @@ const longueurJoueurs = "250 px";
 let aleatoire = Math.floor(Math.random()*5);
 
 const nomJoueurs = ["Steve Kerr", "Micheal Jordan", "Bill Wennington", "Scottie Pippen", "Dennis Rodman"];
-
-const imgJoueurs={
-  steve: {steveKerrImg},
-  micheal: {michaelJordanImg},
-  bill: {billWenningtonImg},
-  scottie: {scottiePippenImg},
-  dennis: {dennisRodmanImg}
-};
+const imagesJoueurs = [steveKerrImg, michaelJordanImg, billWenningtonImg, scottiePippenImg, dennisRodmanImg];
 
 const netflixLogo = (
   <img
@@ -29,50 +22,19 @@ const netflixLogo = (
   with = {longueurLogo}
   />
 )
-const steveKerr = (
-    <img
-      src = {imgJoueurs.steve}
-      alt = "Steve Kerr"
-      height = {longueurJoueurs}
-      with = {longueurJoueurs}
-    />
-);
 
-const michealJordan = (
-    <img
-      src = {imgJoueurs.micheal}
-      alt = "Micheal Jordan"
-      height = {longueurJoueurs}
-      with = {longueurJoueurs}
-    />
-);
+const nomJoueurAffiche =(
+  nomJoueurs[aleatoire]
+)
 
-const billWennington = (
-    <img
-      src = {imgJoueurs.bill}
-      alt = "Bill Wennington"
-      height = {longueurJoueurs}
-      with = {longueurJoueurs}
-    />
-);
-
-const scottiePippen = (
-    <img
-      src = {imgJoueurs.scottie}
-      alt = "Scottie Pippen"
-      height = {longueurJoueurs}
-      with = {longueurJoueurs}
-    />
-);
-
-const dennisRodman = (
-    <img
-      src = {imgJoueurs.dennis}
-      alt = "Dennis Rodman"
-      height = {longueurJoueurs}
-      with = {longueurJoueurs}
-    />
-);
+const imageJoueurs =(
+  <img
+    src = {imagesJoueurs[aleatoire]}
+    alt = {nomJoueurs[aleatoire]}
+    height = {longueurJoueurs}
+    with = {longueurJoueurs}
+  />
+) 
 
 const texteAfficher = (
   <div>
@@ -87,14 +49,12 @@ const texteAfficher = (
       Mettant en vedette 
     </p>
     <h2>
-      {nomJoueurs[aleatoire]}
+      {nomJoueurAffiche}
     </h2>
+      {imageJoueurs}
+    
   </div>
 );
-
-const nomJoueurAffiche = (
-  {nomJoueurs}
-)
 
 function App() {
   return (
