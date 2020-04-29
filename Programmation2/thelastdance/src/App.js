@@ -36,6 +36,18 @@ const imageJoueurs =(
   />
 ) 
 
+const partants = nomJoueurs.map(element => <li>{element}</li>);
+const partants2 = (
+  <ul>
+    {aleatoire === 0 && <li key="li-00">Steve Kerr</li>}
+    {aleatoire === 1 && <li key="li-01">Micheal Jordan</li>}
+    {aleatoire === 2 && <li key="li-02">Bill Wennington</li>}
+    {aleatoire === 3 && <li key="li-03">Scottie Pippen</li>}
+    {aleatoire === 4 && <li key="li-04">Dennis Rodman</li>}
+  </ul>
+);
+
+
 const texteAfficher = (
   <div>
     <h1>
@@ -52,7 +64,16 @@ const texteAfficher = (
       {nomJoueurAffiche}
     </h2>
       {imageJoueurs}
-    
+    <h3>
+      Les 5 partants affichés avec Map()
+    </h3>
+    <ul>
+      {partants}
+    </ul>
+    <h3>
+      Les 4 partants affichés avec &&
+    </h3>
+    {partants2}
   </div>
 );
 
