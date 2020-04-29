@@ -9,9 +9,9 @@ export class TvShow extends React.Component{
         const image = <img src={logo} alt="" title=""/>;
 
         return(
-            <col className="image-fluide" lg="2">
-                image
-            </col>
+            <Col className="img-fluide" lg="2">
+                {image}
+            </Col>
         )
     }
 }
