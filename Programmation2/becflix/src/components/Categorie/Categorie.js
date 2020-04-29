@@ -18,12 +18,7 @@ export class Categorie extends React.Component{
                     </h1>
                 </Row>
                 <Row>
-                    {TvShow}
-                    {TvShow}
-                    {TvShow}
-                    {TvShow}
-                    {TvShow}
-                    {TvShow}
+                    <TvShow/><TvShow/><TvShow/><TvShow/><TvShow/><TvShow/>
                 </Row>
             </div>
         )
