@@ -1,19 +1,24 @@
 import React from 'react';
 import './App.css';
 import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-import {TvShow} from "../TvShow/TvShow";
+import logoBecflix from '../../img/becflix.png';
+
 import {Catalogue} from "../Catalogue/Catalogue";
 
 
 function App() {
   return (
-    <div>
-      <Container className="container-fluide">
-        <TvShow/>
+      <Container fluid>
+        <Row>
+          <Col>
+            <img src={logoBecflix} alt="BecFlix" width="100px"/>
+          </Col>
+        </Row>
         <Catalogue/>
       </Container>
-    </div>
   );
 }
 
