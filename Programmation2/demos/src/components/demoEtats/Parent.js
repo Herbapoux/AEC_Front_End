@@ -4,7 +4,7 @@ import { Enfant } from './Enfant';
  
  
 
-class Parent extends React.Component { 
+export class Parent extends React.Component { 
   constructor(props) { 
     super(props); 
     this.state = { name: 'Patate' }; 

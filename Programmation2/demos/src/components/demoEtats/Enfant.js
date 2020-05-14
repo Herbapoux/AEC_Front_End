@@ -1,6 +1,6 @@
 import React from 'react';  
  
-export class Child extends React.Component {  
+export class Enfant extends React.Component {  
   constructor(props) {  
     super(props);  
     this.handleChange = this.handleChange.bind(this);  
